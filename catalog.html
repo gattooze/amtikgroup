@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Catalog — Amtik Group</title>
+  <meta name="description" content="Download the Amtik Group product catalog — complete specifications for our range of plastic caps and closures.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .catalog-gate {
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, var(--navy) 0%, #0A3060 100%);
+      padding: 80px 24px; margin-top: 68px;
+      position: relative; overflow: hidden;
+    }
+    .catalog-gate::before {
+      content: ''; position: absolute; right: -80px; top: -80px;
+      width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,184,217,.12), transparent 65%);
+    }
+    .catalog-gate::after {
+      content: ''; position: absolute; left: -100px; bottom: -100px;
+      width: 400px; height: 400px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,82,165,.2), transparent 70%);
+    }
+    .catalog-card {
+      background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12);
+      border-radius: 16px; padding: 56px 64px; max-width: 520px; width: 100%;
+      backdrop-filter: blur(16px); position: relative; z-index: 1;
+      text-align: center;
+    }
+    .catalog-icon {
+      width: 72px; height: 72px; border-radius: 16px; background: rgba(0,184,217,.15);
+      border: 1px solid rgba(0,184,217,.3); display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 28px;
+    }
+    .catalog-icon svg { width: 32px; height: 32px; color: var(--cyan); }
+    .catalog-card h2 { color: #fff; margin-bottom: 12px; font-size: 1.8rem; }
+    .catalog-card > p { color: rgba(255,255,255,.55); font-size: .9rem; margin-bottom: 36px; line-height: 1.7; }
+    .catalog-form { display: flex; flex-direction: column; gap: 14px; text-align: left; }
+    .catalog-form label { font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.5); display: block; margin-bottom: 6px; }
+    .catalog-form input {
+      width: 100%; padding: 13px 16px;
+      background: rgba(255,255,255,.07); border: 1.5px solid rgba(255,255,255,.12); border-radius: 8px;
+      font-family: inherit; font-size: .9rem; color: #fff; outline: none;
+      transition: border-color .2s, background .2s;
+    }
+    .catalog-form input::placeholder { color: rgba(255,255,255,.3); }
+    .catalog-form input:focus { border-color: var(--cyan); background: rgba(255,255,255,.1); }
+    .catalog-submit {
+      width: 100%; padding: 14px; border: none; border-radius: 8px;
+      background: var(--cyan); color: #fff; font-family: inherit;
+      font-size: .9rem; font-weight: 700; cursor: pointer;
+      transition: background .2s, transform .15s;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      margin-top: 8px;
+    }
+    .catalog-submit:hover { background: #00a4c2; transform: translateY(-1px); }
+    .catalog-submit svg { width: 16px; height: 16px; }
+    .catalog-note { font-size: .75rem; color: rgba(255,255,255,.3); text-align: center; margin-top: 14px; }
+    .catalog-success {
+      display: none; flex-direction: column; align-items: center; text-align: center; gap: 20px;
+    }
+    .catalog-success-icon {
+      width: 72px; height: 72px; border-radius: 50%; background: rgba(52,199,89,.15);
+      border: 2px solid rgba(52,199,89,.4); display: flex; align-items: center; justify-content: center;
+    }
+    .catalog-success-icon svg { width: 32px; height: 32px; color: #34C759; }
+    .catalog-success h3 { color: #fff; font-size: 1.5rem; }
+    .catalog-success p { color: rgba(255,255,255,.55); font-size: .88rem; line-height: 1.65; }
+    .catalog-dl-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--cyan); color: #fff; padding: 14px 28px; border-radius: 8px;
+      font-weight: 700; font-size: .9rem; transition: background .2s;
+    }
+    .catalog-dl-btn:hover { background: #00a4c2; }
+    .catalog-dl-btn svg { width: 16px; height: 16px; }
+    .catalog-features {
+      display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;
+      margin-top: 32px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .cf { display: flex; align-items: center; gap: 8px; font-size: .78rem; color: rgba(255,255,255,.4); }
+    .cf svg { width: 14px; height: 14px; color: var(--cyan); }
+  </style>
+</head>
+<body>
+
+  <div id="nav-mount"></div>
+
+  <div class="catalog-gate">
+    <div class="catalog-card">
+
+      <!-- Gate form -->
+      <div id="catalogGate">
+        <div class="catalog-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        </div>
+        <span class="eyebrow" style="color:rgba(255,255,255,.5);">Product Catalog 2024–25</span>
+        <h2>Download Our Full<br>Product Catalog</h2>
+        <p>120+ products with full specifications, dimensions, and application references. Share your name and email and we'll send it to your inbox — and unlock instant download.</p>
+
+        <form class="catalog-form" id="catalogForm" action="https://formsubmit.co/pratik@amtikgroup.in" method="POST">
+          <input type="hidden" name="_subject" value="Catalog Download Request — Amtik Group Website">
+          <input type="hidden" name="_next" value="catalog.html?downloaded=true">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none">
+
+          <div>
+            <label for="cat_name">Your Name *</label>
+            <input type="text" id="cat_name" name="name" placeholder="Full name" required>
+          </div>
+          <div>
+            <label for="cat_email">Work Email *</label>
+            <input type="email" id="cat_email" name="email" placeholder="you@company.com" required>
+          </div>
+          <div>
+            <label for="cat_company">Company</label>
+            <input type="text" id="cat_company" name="company" placeholder="Company name (optional)">
+          </div>
+          <input type="hidden" name="request_type" value="Catalog Download">
+
+          <button type="submit" class="catalog-submit">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            Get Catalog
+          </button>
+          <p class="catalog-note">We'll also send a copy to your inbox. No spam, ever.</p>
+        </form>
+
+        <div class="catalog-features">
+          <div class="cf">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            120+ Products
+          </div>
+          <div class="cf">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Full Specs &amp; Dimensions
+          </div>
+          <div class="cf">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            PDF Format
+          </div>
+        </div>
+      </div>
+
+      <!-- Success state (shown after URL param) -->
+      <div class="catalog-success" id="catalogSuccess">
+        <div class="catalog-success-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <div>
+          <span class="eyebrow" style="color:rgba(255,255,255,.5);">Request Received</span>
+          <h3>We're sending it to your inbox!</h3>
+          <p>Check your email shortly for the Amtik Group Product Catalog 2024–25. In the meantime, explore our product range or get in touch with our sales team.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;width:100%;">
+          <a href="products.html" class="catalog-dl-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+            Browse All Products
+          </a>
+          <a href="contact.html" class="btn btn-outline" style="justify-content:center;">Contact Sales Team</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="footer-mount"></div>
+  <script src="components.js"></script>
+  <script src="main.js"></script>
+  <script>
+    (function () {
+      const p = new URLSearchParams(location.search);
+      if (p.get('downloaded') === 'true') {
+        document.getElementById('catalogGate').style.display = 'none';
+        const s = document.getElementById('catalogSuccess');
+        s.style.display = 'flex';
+        setTimeout(() => s.style.opacity = '1', 50);
+      }
+    })();
+  </script>
+</body>
+</html>
