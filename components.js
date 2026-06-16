@@ -43,7 +43,7 @@
           <div class="nav-logo-mark">AG</div>
           <div class="nav-logo-text">AMTIK<span> GROUP</span></div>
         </a>
-        <p class="footer-brand-desc">Precision injection &amp; blow moulded plastic caps and closures since 1990. Trusted by India's leading brands across FMCG, pharma, personal care, and more.</p>
+        <p class="footer-brand-desc">India's leading manufacturer of precision injection &amp; blow moulded caps and closures since 1990. ISO Certified · Made in India.</p>
         <div class="footer-certs">
           <span class="footer-cert">ISO 9001:2015</span>
           <span class="footer-cert">Est. 1990</span>
@@ -64,19 +64,19 @@
       <div class="footer-col">
         <h5>Products</h5>
         <ul>
+          <li><a href="products.html">Stand Up Caps</a></li>
+          <li><a href="products.html">FEZ Caps</a></li>
           <li><a href="products.html">Flip Top Caps</a></li>
-          <li><a href="products.html">Disc Top Caps</a></li>
-          <li><a href="products.html">Pump Dispensers</a></li>
-          <li><a href="products.html">Trigger Sprayers</a></li>
-          <li><a href="products.html">Ribbed Caps</a></li>
-          <li><a href="products.html">Moulded Closures</a></li>
+          <li><a href="products.html">Pharma Caps</a></li>
+          <li><a href="products.html">Containers</a></li>
+          <li><a href="products.html">Floral Trays</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Contact</h5>
         <div class="footer-contact-item">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-          <address>Survey No. 89, Plot No. 15,<br>Village Waliv, Vasai East,<br>Palghar – 401 208, Maharashtra</address>
+          <address>801, Kamla Hub, N.S. Road No.1,<br>JVPD Scheme, Vile Parle (W),<br>Mumbai – 400 049, India</address>
         </div>
         <div class="footer-contact-item">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
