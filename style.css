@@ -99,6 +99,7 @@ p { font-size: .95rem; line-height: 1.75; color: var(--muted); }
   height: 2px; background: var(--cyan); border-radius: 2px;
 }
 .btn-nav-cta { background: var(--text); color: #fff; border-color: var(--text); margin-left: 20px; }
+.nav-cta-mobile { display: none !important; }
 .btn-nav-cta:hover { background: var(--navy2); border-color: var(--navy2); transform: translateY(-1px); }
 .nav-cta { flex-shrink: 0; }
 .hamburger { display: none; flex-direction: column; gap: 5px; padding: 6px; margin-left: 12px; }
@@ -120,6 +121,9 @@ p { font-size: .95rem; line-height: 1.75; color: var(--muted); }
 .page-header-inner { position: relative; z-index: 1; }
 .page-header h1 { color: #fff; max-width: 720px; }
 .page-header p { color: rgba(255,255,255,.65); max-width: 600px; margin-top: 16px; font-size: 1.05rem; }
+
+/* Prevent global section padding bleeding into hero/brands */
+.hero-pm, .brands-pm { padding: 0; }
 
 /* ─── HOME HERO ────────────────────────────────────────── */
 .hero {
@@ -518,7 +522,7 @@ section { padding: 96px 0; }
 }
 .hero-pm-text {
   background: #fff; display: flex; flex-direction: column;
-  justify-content: flex-start; padding: 120px 72px 72px 60px;
+  justify-content: flex-start; padding: 80px 64px 72px 60px;
 }
 .hero-pm-text .eyebrow { color: var(--muted); font-size: 10px; }
 .hero-pm-text h1 {
