@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }, { threshold: 0.4 });
-  document.querySelectorAll('.stats').forEach(el => countIO.observe(el));
+  document.querySelectorAll('.stats, .stats-section').forEach(el => countIO.observe(el));
 
   /* ── Stat underline animation ── */
   const statIO = new IntersectionObserver((entries) => {

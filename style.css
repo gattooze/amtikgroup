@@ -507,6 +507,119 @@ section { padding: 96px 0; }
 [data-reveal] { opacity: 0; transform: translateY(28px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
 [data-reveal].visible { opacity: 1; transform: none; }
 
+/* ─── HOME STATS (redesigned) ─────────────────────────── */
+.stats-section { background: var(--navy); padding: 0; }
+.stats-band {
+  display: flex; align-items: stretch;
+  border-left: 1px solid rgba(255,255,255,.08);
+}
+.stat-item {
+  flex: 1; padding: 52px 40px;
+  border-right: 1px solid rgba(255,255,255,.08);
+  position: relative; cursor: default;
+}
+.stat-item::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--cyan) 0%, rgba(0,184,217,.2) 100%);
+  transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease);
+}
+.stat-item:hover::before { transform: scaleX(1); }
+.stat-value {
+  font-size: clamp(2.8rem,4.5vw,4rem); font-weight: 900; color: #fff;
+  line-height: 1; display: flex; align-items: baseline; gap: 3px; letter-spacing: -.04em;
+}
+.stat-value sup { font-size: 40%; color: var(--cyan); font-weight: 900; }
+.stat-label {
+  font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  color: rgba(255,255,255,.38); margin-top: 14px;
+}
+.stat-divider { display: none; }
+
+/* ─── ABOUT STRIP (redesigned home) ──────────────────── */
+.about-strip {
+  display: grid; grid-template-columns: 1fr 1fr;
+  min-height: 580px; background: #fff; padding: 0;
+}
+.about-strip-img {
+  overflow: hidden; position: relative;
+}
+.about-strip-img img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center;
+  transition: transform .8s var(--ease);
+}
+.about-strip:hover .about-strip-img img { transform: scale(1.04); }
+.about-strip-body {
+  background: var(--off); padding: 72px 64px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.about-strip-body h2 { margin: 8px 0 16px; }
+.about-strip-body > p { max-width: 460px; }
+
+/* ─── INDUSTRIES (redesigned pills) ──────────────────── */
+.ind-strip {
+  display: flex; flex-wrap: wrap; gap: 12px; margin-top: 48px; justify-content: center;
+}
+.ind-pill {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 28px; background: #fff; border: 1.5px solid var(--border);
+  border-radius: 100px; cursor: default; transition: all .2s var(--ease);
+}
+.ind-pill:hover {
+  border-color: var(--cyan); background: #F0FBFF; transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,184,217,.15);
+}
+.ind-pill-icon { font-size: 1.35rem; line-height: 1; }
+.ind-pill-name { font-size: .88rem; font-weight: 700; color: var(--navy); white-space: nowrap; }
+
+/* ─── PRODUCTS COMPACT GRID ───────────────────────────── */
+.prod-compact-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 1px;
+  background: var(--border); border: 1px solid var(--border);
+  border-radius: 12px; overflow: hidden;
+}
+.prod-compact-card {
+  background: #fff; display: flex; flex-direction: column;
+  overflow: hidden; transition: background .2s var(--ease);
+}
+.prod-compact-card:hover { background: #F0FBFF; }
+.prod-compact-img { aspect-ratio: 4/3; overflow: hidden; }
+.prod-compact-img img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .5s var(--ease);
+}
+.prod-compact-card:hover .prod-compact-img img { transform: scale(1.06); }
+.prod-compact-body { padding: 18px 22px 22px; }
+.prod-compact-tag {
+  display: block; font-size: .63rem; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--cyan); margin-bottom: 5px;
+}
+.prod-compact-name {
+  font-size: 1rem; font-weight: 800; color: var(--navy); margin-bottom: 4px; letter-spacing: -.015em;
+}
+.prod-compact-apps { font-size: .78rem; color: var(--muted); }
+
+/* ─── BRAND LOGO MARQUEE ──────────────────────────────── */
+.brands-section { background: var(--off); padding: 80px 0; overflow: hidden; }
+.brands-marquee-wrap { overflow: hidden; }
+.brands-section .marquee-wrap::before { background: linear-gradient(to right, var(--off), transparent); }
+.brands-section .marquee-wrap::after  { background: linear-gradient(to left, var(--off), transparent); }
+.brand-logo-card {
+  flex-shrink: 0; width: 160px; height: 72px; padding: 12px 20px;
+  background: #fff; border: 1px solid var(--border); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all .2s var(--ease);
+}
+.brand-logo-card:hover { border-color: var(--cyan); box-shadow: 0 4px 20px rgba(0,0,0,.08); }
+.brand-logo-card img {
+  max-width: 100%; max-height: 38px; width: auto; height: auto;
+  object-fit: contain; filter: grayscale(1); opacity: .7;
+  transition: filter .2s, opacity .2s;
+}
+.brand-logo-card:hover img { filter: grayscale(0); opacity: 1; }
+.brand-fallback {
+  display: none; font-size: .75rem; font-weight: 700; color: var(--muted); text-align: center;
+}
+
 /* ─── RESPONSIVE ──────────────────────────────────────── */
 @media (max-width: 1024px) {
   .about-home-grid, .two-col, .why-inner, .contact-grid, .process-grid, .tl-grid, .iso-grid { grid-template-columns: 1fr; gap: 48px; }
@@ -548,4 +661,24 @@ section { padding: 96px 0; }
   .hero-actions { flex-direction: column; align-items: flex-start; }
   .filter-inner { padding: 12px 20px; }
   .about-home-badge { right: 12px; bottom: 16px; }
+}
+
+/* New component responsive */
+@media (max-width: 1024px) {
+  .stats-band { flex-wrap: wrap; }
+  .stat-item { flex: 0 0 50%; }
+  .about-strip { grid-template-columns: 1fr; min-height: auto; }
+  .about-strip-img { min-height: 340px; }
+  .about-strip-body { padding: 56px 40px; }
+  .prod-compact-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 768px) {
+  .stat-item { flex: 0 0 50%; padding: 36px 24px; }
+  .stat-value { font-size: 2.5rem; }
+  .about-strip-body { padding: 48px 24px; }
+  .ind-strip { gap: 8px; }
+  .ind-pill { padding: 11px 18px; }
+  .ind-pill-name { font-size: .82rem; }
+  .prod-compact-grid { grid-template-columns: 1fr; }
+  .brand-logo-card { width: 130px; height: 62px; }
 }
