@@ -23,9 +23,8 @@
     </a>
     <div class="nav-links" id="navLinks">
       ${links}
-      <a href="contact.html" class="btn btn-primary btn-sm nav-cta-mobile" style="margin:20px 24px 0;">Get a Quote</a>
     </div>
-    <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Get a Quote</a>
+    <a href="contact.html" class="btn btn-nav-cta btn-sm nav-cta">Get a Quote</a>
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -103,7 +102,6 @@
     const footerMount = document.getElementById('footer-mount');
     if (footerMount) footerMount.outerHTML = footerHTML();
 
-    /* scroll nav shadow */
     const nav = document.getElementById('mainNav');
     if (nav) {
       window.addEventListener('scroll', () => {
@@ -111,13 +109,12 @@
       }, { passive: true });
     }
 
-    /* hamburger */
     const ham = document.getElementById('hamburger');
-    const links = document.getElementById('navLinks');
-    if (ham && links) {
+    const navLinks = document.getElementById('navLinks');
+    if (ham && navLinks) {
       ham.addEventListener('click', () => {
         ham.classList.toggle('open');
-        links.classList.toggle('open');
+        navLinks.classList.toggle('open');
       });
     }
   });
